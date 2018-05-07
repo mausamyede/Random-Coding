@@ -36,7 +36,7 @@ class AccidentPredictor:
 
     def getRideScenario(self, row):
         return RideScenario(self.parseToFloat(row["Longitude"]), self.parseToFloat(row["Latitude"]),
-                            self.parseToFloat(row["Day_of_Week"]),
+                            self.parseToFloat(row["Day_of_Week"]), self.parseToFloat(row["Time"].replace(':', '')),
                             self.parseToFloat(row["Road_Type"]), self.parseToFloat(row["Speed_limit"]),
                             self.parseToFloat(row["Light_Conditions"]),
                             self.parseToFloat(row["Weather_Conditions"]),
